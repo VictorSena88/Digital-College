@@ -66,5 +66,5 @@
 >
 > ## 👥 Desenvolvedores
 >
-> - 👨‍💻 Victor Sena  
+> - 👨‍💻 Victor Matheus Bezerra de Sena  
 > - 👨‍💻 Felipe Paiva
