@@ -26,9 +26,10 @@
 > ---
 >
 > ## 🚀 Como Executar o Projeto
+> 
 >
 > ### 🖥️ Instalação:
->
+> Acesse a pasta Projeto Front
 > Clone o repositório e instale as dependências com:
 >
 > ```bash
