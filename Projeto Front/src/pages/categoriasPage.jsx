@@ -3,23 +3,23 @@ import { useNavigate } from 'react-router-dom';
 const categorias = [
   {
     nome: 'Camisetas',
-    imagem: 'https://images.mont.ink/mockups/51173/Marrom_3697018.png',
+    imagem: 'https://flamengo.vteximg.com.br/arquivos/ids/172109-473-473/IV6052_FR_Torso_eCom-3-removebg-preview.png.png?v=638731066205230000',
   },
   {
     nome: 'Calças',
-    imagem: 'https://rivierawear.com.br/cdn/shop/files/S7818ae00b9084262835f54fff6d61f1fU.jpg?v=1688494129',
+    imagem: 'https://i.pinimg.com/736x/3c/a6/06/3ca606abf1afe32ff9762081875d9697.jpg',
   },
   {
     nome: 'Bonés',
-    imagem: 'https://images.tcdn.com.br/img/img_prod/1150285/bone_mst_281_1_b909645315b840b62fd488ca0dbafe07.jpg',
+    imagem: 'https://cdn.dooca.store/1290/products/bone-baseball-preto-1_620x620+fill_ffffff.jpg?v=1654190970&webp=0',
   },
   {
     nome: 'Tênis',
-    imagem: 'https://images.tcdn.com.br/img/img_prod/1188746/tenis_converse_all_star_amarelo_13_2_2258f75d65c88dfdde8ca197da06720d.jpg',
+    imagem: 'https://png.pngtree.com/png-clipart/20241210/original/pngtree-nike-shoes-transparent-png-image_17778783.png',
   },
   {
     nome: 'Headphones',
-    imagem: 'https://fastshopbr.vtexassets.com/arquivos/ids/498166/0-JBLLIVE770PTO-PRD-1500-1.jpg?v=638702103996270000',
+    imagem: 'https://png.pngtree.com/png-clipart/20240525/original/pngtree-wireless-headphone-isolated-on-transparent-background-png-image_15176787.png',
   },
 ];
 

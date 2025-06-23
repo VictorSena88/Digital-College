@@ -9,7 +9,7 @@ const Footer = () => {
         <div>
           <img src={LogoFooter} alt="Drip Store Logo" className="h-8 mb-4" />
           <p className="text-sm text-gray-400 mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+            Drip Store é a sua loja online de moda urbana, oferecendo as últimas tendências em roupas, acessórios e muito mais. Explore nossa coleção e encontre o estilo perfeito para você.
           </p>
           <div className="flex space-x-4">
             <FaFacebookF className="text-white hover:text-pink-600 cursor-pointer" />

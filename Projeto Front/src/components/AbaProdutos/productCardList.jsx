@@ -1,67 +1,54 @@
-// Corrigido ProductCardList.jsx
-import { Link } from "react-router-dom";
-import { useCart } from "../../contexts/cartContext";
+import { useNavigate, useLocation } from "react-router-dom";
+import { HiArrowNarrowRight } from "react-icons/hi";
+import ProductCard from "../HomePage/productCard";
 
-const ProductCardList = ({ id, image, name, category, price, priceDiscount, fullProduct }) => {
-  const { cartItems, addToCart, removeFromCart } = useCart();
+const ProductListing = ({ products }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const isInCart = cartItems.some((item) => item.id === id);
+  const handleViewAll = () => {
+    navigate("/produtos");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
-  const handleCartClick = (e) => {
-    e.preventDefault(); // Evita que clique no botão dispare a navegação do Link
-    if (isInCart) {
-      removeFromCart(id);
-    } else {
-      addToCart(fullProduct);
+  const isHomePage = location.pathname === "/";
+  console.log("IDs dos produtos:", products.map(p => p.id));
+  products.forEach((product) => {
+    if (!product.id) {
+      console.warn("Produto sem ID:", product);
     }
-  };
-
-  const formatPrice = (value) => {
-    if (typeof value !== "number") return null;
-    return new Intl.NumberFormat("pt-BR", {
-      style: "currency",
-      currency: "BRL",
-      minimumFractionDigits: 2,
-    }).format(value);
-  };
+  });
 
   return (
-    <div className="flex flex-col border rounded-lg overflow-hidden shadow-md bg-white transition hover:shadow-lg">
-      <Link to={`/produto/${id}`} className="block">
-        <div className="relative h-56 flex items-center justify-center p-4 cursor-pointer">
-          <span className="absolute top-2 left-2 bg-lime-200 text-xs font-bold text-gray-800 px-2 py-1 rounded">
-            30% OFF
-          </span>
-          <img src={image} alt={`Imagem do produto ${name}`} className="max-h-40 object-contain" />
-        </div>
-      </Link>
-      <div className="p-4 flex flex-col gap-2">
-        <p className="text-sm text-gray-500">{category}</p>
-        <p className="font-medium text-sm">{name}</p>
-        <div className="text-sm">
-          {formatPrice(price) && (
-            <span className="line-through text-gray-400 mr-2">{formatPrice(price)}</span>
-          )}
-          {formatPrice(priceDiscount) && (
-            <span className="font-bold text-black">{formatPrice(priceDiscount)}</span>
-          )}
-        </div>
-        <button
-          onClick={handleCartClick}
-          className={`mt-2 py-1 px-3 rounded text-sm transition font-semibold w-fit ${
-            isInCart
-              ? "bg-green-500 text-white hover:bg-green-600"
-              : "bg-primary text-white hover:brightness-110"
-          }`}
-        >
-          {isInCart ? "Adicionado ao carrinho" : "Adicionar ao carrinho"}
-        </button>
+    <section className="px-4 mb-12">
+      <div className="flex items-center justify-between mb-6">
+        <h2 className="text-lg font-semibold">Produtos em destaque:</h2>
+        {isHomePage && (
+          <button
+            onClick={handleViewAll}
+            className="text-pink-600 text-sm font-medium flex items-center gap-1 hover:text-pink-700 transition group"
+          >
+            Ver todos
+            <HiArrowNarrowRight className="text-base transform group-hover:translate-x-1 transition-transform" />
+          </button>
+        )}
       </div>
-    </div>
+
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
+        {Array.isArray(products) &&
+          products?.map((product, index) => (
+            <ProductCard
+              key={product.id ?? `${product.name}-${index}`}
+              product={product}
+            />
+          ))}
+      </div>
+    </section>
   );
 };
 
-export default ProductCardList;
+export default ProductListing;
+
 
 
 

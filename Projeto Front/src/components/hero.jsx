@@ -39,7 +39,7 @@ const Hero = () => {
       );
     }, 2000);
 
-    return () => clearInterval(interval); 
+    return () => clearInterval(interval);
   }, [slides.length]);
 
   const goToProducts = () => {
@@ -62,17 +62,17 @@ const Hero = () => {
             Melhores ofertas personalizadas:
           </p>
 
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-neutral-900 leading-snug mb-6">
-          Queima de Estoque{' '}
-          <span className="inline-flex items-center gap-2">
-          Nike
-            <img
-              src={fireIcon}
-              alt="Ícone de fogo"
-              className="w-16 h-16 md:w-19 md:h-18 inline-block"
-            />
-          </span>
-        </h1>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-neutral-900 leading-snug mb-6">
+            Queima de Estoque{' '}
+            <span className="inline-flex items-center gap-2">
+              Nike
+              <img
+                src={fireIcon}
+                alt="Ícone de fogo"
+                className="w-16 h-16 md:w-19 md:h-18 inline-block"
+              />
+            </span>
+          </h1>
 
           <p className="text-gray-600 text-sm md:text-base font-normal mb-6 max-w-xl mx-auto lg:mx-0">
             {current.description}
@@ -107,9 +107,8 @@ const Hero = () => {
             key={index}
             onClick={() => setCurrentSlide(index)}
             aria-label={`Selecionar slide ${index + 1}`}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide ? 'bg-pink-600 scale-110' : 'bg-gray-300'
-            }`}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide ? 'bg-pink-600 scale-110' : 'bg-gray-300'
+              }`}
           />
         ))}
       </div>
