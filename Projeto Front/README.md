@@ -26,11 +26,14 @@
 > ---
 >
 > ## 🚀 Como Executar o Projeto
+> 
 >
 > ### 🖥️ Instalação:
 >
-> Clone o repositório e instale as dependências com:
->
+> Primeiramente acesse a pasta Projeto Front e depois instale as dependências com:
+>  ```bash
+> cd Projeto Front
+> ```
 > ```bash
 > npm install
 > ```
@@ -66,5 +69,5 @@
 >
 > ## 👥 Desenvolvedores
 >
-> - 👨‍💻 Victor Matheus Bezerra de Sena 
+> - 👨‍💻 Victor Matheus Bezerra de Sena  
 > - 👨‍💻 Felipe Paiva
