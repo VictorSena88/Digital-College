@@ -67,4 +67,4 @@
 > ## 👥 Desenvolvedores
 >
 > - 👨‍💻 Victor Matheus Bezerra de Sena 
-> - 👨‍💻 Felipe Paiva
+> - 👨‍💻 Felepe Santos Paiva
